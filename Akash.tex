@@ -1,0 +1,162 @@
+\documentclass[a4paper]{article}
+    \usepackage{fullpage}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{textcomp}
+    \textheight=10in
+    \pagestyle{empty}
+    \raggedright
+
+    %\renewcommand{\encodingdefault}{cg}
+%\renewcommand{\rmdefault}{lgrcmr}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+    % END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+    \begin{document}
+
+\vspace*{-40pt}
+
+%==== Profile ====%
+\vspace*{-10pt}
+\begin{center}
+	{\Huge \scshape {Akash Ravichandran}}\\
+	Chennai, TN $\cdot$ akash.chandran30@gmail.com $\cdot$ 9677228515 $\cdot$ github.com/Akash3096\\
+\end{center}
+
+\vspace*{2mm}
+
+%==== Education ====%
+\header{Education}
+\textbf{College of Engineering Guindy, Anna University}\hfill Chennai, TN\\
+B.E. Electronics and Communication Engineering \textit{GPA: 8.17} \hfill Grad: May 2018\\
+\vspace{2mm}
+
+\vspace*{2mm}
+
+%==== Experience ====%
+\header{Experience}
+\vspace{1mm}
+
+\textbf{IEEE - CEG Chapter} \hfill Chennai, TN\\
+\textit{Chairman} \hfill February 2017 | Present\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Lead the CEG IEEE Chapter to a better level and Involve everyone to actively participate in competitions and conferences.
+\end{itemize}
+
+\textbf{Qvady Technologies} \hfill Chennai, TN\\
+\textit{Software Engineer} \hfill 15 May 2015 | 15 July 2015\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Created a WPF application based on the requirement of the company.
+\end{itemize}
+
+\textbf{Ceg Tech Forum} \hfill Chennai, TN\\
+\textit{Organiser for Gesture Controlled Robotics Workshop} \hfill November 2016 | February 2017\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Plan the Workshop
+	\item Maintain expenses
+\end{itemize}
+
+\textbf{Startup Weekend - Google} \hfill Chennai, TN\\
+\textit{Organiser} \hfill September 2015 | February 2016\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+	\item Created Posters
+	\item Marketing
+\end{itemize}
+
+\header{Skills}
+\begin{tabular}{ l l }
+	Programming:      & C, C++, C\#, HTML, Arduino, Java, Python, JavaScript, Matlab          \\
+	Devices:          & Intel Edison Board, Linkit Smart 7688, Arduino, Raspberry Pi, Photon \\
+	Management:       & Teamwork, Leadership, Decision Making, Time Management, Creativity    \\
+	Softwares:        & Android Studio, PSoC Creator, LTSpice, Matlab, Xilinx                \\
+	Extra-Curricular: & Table tennis, Volleyball, Scouts and Guides, Robotics, NSS            \\
+\end{tabular}
+
+\vspace*{2mm}
+
+\header{Projects}
+{\textbf{Airlock} \sl Arduino} \hfill https://www.hackster.io/27207/airlock-with-artik-cloud-dc7226?team=27207\\
+The airlock is an elegant locking system which uses pattern lock concept. It is to provide security to houses and it will be extended in the future for Banks and other places.\\
+\vspace*{2mm}
+{\textbf{AirArt} \sl Python, Opencv, Arduino} \hfill https://www.hackster.io/19845/air-art-955c27\\
+Real-time image processing of what we draw in front of the camera and reflect the same by means of a 2d arm(using inverse kinematics concept) on the paper.\\
+\vspace*{2mm}
+{\textbf{Play TicTacToe}\hfill https://www.hackster.io/akashchandran30/frdm-k82f-play-x-0-game-0ebccb\\
+	Using NXP FRDM K82f development board, did a small module to play tic tac toe as a single and two player game. Learnt embedded C of NXP in due course of doing the project.\\
+	\vspace*{2mm}
+	{\textbf{Magic Mirror} \sl Raspberry Pi, Nodejs, Python, Opencv} \\
+	A mirror which is synced with the phone, laptop and TV, which gives you notifications. We have included Amazon Alexa and face recognition module for security.\\
+	\vspace*{2mm}
+	
+	\vspace*{2mm}
+	
+	\header{Awards}
+	\textbf{School First in SSLC Examination Kalaimagal Vidyalaya} \hfill Chennai, TN\\
+	Received a Gold medal for securing School First in SSLC Examination. \hfill April 2012\\
+	\vspace*{2mm}
+	\textbf{School First in HSC Examination Kalaimagal Vidyalaya} \hfill Chennai, TN\\
+	Received a Gold medal for securing School First in HSC Examination. \hfill March 2014\\
+	\vspace*{2mm}
+	\textbf{IoT For Everyone-First Place Sparkfun Electronics} \hfill Chennai, TN\\
+	Secured first place in the competition and won \$1500 gift certificate. \hfill July 2016\\
+	\vspace*{2mm}
+	\textbf{First Runner-up at Code fun do Microsoft} \hfill Chennai, TN\\
+	Presented and assembled a prototype of a Gesture controlled robot for the elderly person. \hfill February 2017\\
+	\vspace*{2mm}
+	
+	\ 
+\end{document}
