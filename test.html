@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Google Maps Example</title>
+    <script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.19.0.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>PubNub Google Maps Tutorial - Live Device Location</h1>
+      <div id="map-canvas" style="width:600px;height:400px"></div>
+    </div>
+
+    <script>
+var pubnub = new PubNub({
+  publishKey: 'demo',
+  subscribeKey: 'demo'
+});
+setInterval(function(){
+
+  pubnub.publish({
+    channel: 'south-coast-bus-data',
+    message:
+      [
+        {"latlng":[31,-99]},
+        {"latlng":[32,-100]},
+        {"latlng":[33,-101]},
+        {"latlng":[35,-102]}
+      ]
+  });
+
+}, 1000);
+</script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyBtWK2CRtwb0XbhhUQhLkEEAoP0N01GFUY&callback=initialize"></script>
+  </body>
+</html>
